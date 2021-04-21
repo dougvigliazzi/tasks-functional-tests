@@ -20,10 +20,13 @@ public class HealthCheckIT {
 		try {
 			driver.navigate().to("http://192.168.1.118:9999/tasks");
 			driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-			String version = driver.findElement(By.id("version")).getText();
+			//String version = driver.findElement(By.id("version")).getText();
+			driver.findElement(By.id("version")).getText();
 			Assert.assertTrue(version.startsWith("build"));
+			return driver;
 		} finally {
 			driver.quit();
 		}
 	}
 }
+ 
