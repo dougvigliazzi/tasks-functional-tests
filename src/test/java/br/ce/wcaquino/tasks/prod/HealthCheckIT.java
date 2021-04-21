@@ -24,7 +24,7 @@ public class HealthCheckIT {
 			System.out.println(version);
 			//driver.findElement(By.id("version")).getText();
 			//Assert.assertTrue(version.startsWith("build"));
-			return driver;
+			//return driver;
 		} finally {
 			driver.quit();
 		}
